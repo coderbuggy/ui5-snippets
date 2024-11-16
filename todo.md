@@ -1,0 +1,4 @@
+- deep entity oluşturmak için hazır snippets
+  - secili olan alanları direkt kopyala yapıştır yapacak, generate diyecek ve sağda oEntry içinde onu verecek.
+- i18n converter ekle
+- hazır query snippets ve filters alanlarını verecek kodu ekle.

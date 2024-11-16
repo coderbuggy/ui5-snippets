@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <title>SAPUI5 Fiori Snippets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SAPUI5 Fiori Snippets</h1>
+      <div class="button-container">
+        <button id="deep-entity-button" class="button" role="button">Deep Entity Snippets</button>
+        <button id="query-set-button" class="button" role="button">QuerySet Snippets</button>
+        <button id="i18n-converter-button" class="button" role="button">i18n Converter</button>
+      </div>
+
+      <!-- deep-entity-button section start-->
+
+      <div id="deep-entity-section" style="display: block;">
+        <div class="split-container">
+          <div class="left-panel">
+            <div class="input-section">
+              <textarea 
+                id="deep-input" 
+                class="input-field" 
+                placeholder="Enter deep parameters"
+                rows="5"
+              ></textarea>
+              <button class="button add-button">
+                <span><i class="fa-solid fa-plus"></i></span> Generate Deep Set
+              </button>
+            </div>
+          </div>
+          <div class="right-panel">
+            <div id="deep-code">
+              <textarea id="generated-deep-code" class="input-field" readonly></textarea>
+              <button class="button" id="copy-i18n-button" onclick="copyToClipboard()">
+                <span><i class="fa fa-regular fa-copy"></i></span> Copy All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- deep-entity-button section end-->
+
+      <!-- query-set-button section start -->
+      <div id="query-set-section" style="display: none;">
+        <div class="split-container">
+          <div class="left-panel">
+            <div class="input-section">
+              <textarea 
+                id="query-input" 
+                class="input-field" 
+                placeholder="Enter query parameters"
+                rows="5"
+              ></textarea>
+              <button class="button add-button">
+                <span><i class="fa-solid fa-plus"></i></span> Generate Query
+              </button>
+            </div>
+          </div>
+          <div class="right-panel">
+            <div id="query-code">
+              <button class="button" id="copy-i18n-button" onclick="copyToClipboard()">
+                <span><i class="fa fa-regular fa-copy"></i></span> Copy All
+              </button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <!-- query-set-button section end -->
+
+      <!-- i18n-converter section start -->
+      <div id="i18n-section" style="display: none;">
+        <div class="split-container">
+          <div class="left-panel">
+            <div class="input-section">
+              <div class="radio-group">
+                <input type="radio" id="to-unicode" name="conversion-type" value="to-unicode" checked>
+                <label for="to-unicode">To Unicode</label>
+                <input type="radio" id="from-unicode" name="conversion-type" value="from-unicode">
+                <label for="from-unicode">To Plain</label>
+              </div>
+              <textarea 
+                id="i18n-input" 
+                class="input-field" 
+                placeholder="Dönüştürülecek metni girin"
+                rows="5"
+              ></textarea>
+              <button class="button add-button" id="convert-button">
+                <span><i class="fa-solid fa-arrows-turn-to-dots"></i></span> Convert
+              </button>
+            </div>
+          </div>
+          <div class="right-panel">
+            <div id="i18n-code"></div>
+            <button class="button" id="copy-i18n-button" onclick="copyToClipboard()">
+              <span><i class="fa fa-regular fa-copy"></i></span> Copy All
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- i18n-converter section end -->
+
+    <script type="text/javascript" src="/script.js"></script>
+</html>
